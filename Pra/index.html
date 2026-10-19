@@ -1,259 +1,549 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Imaginary Store</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CodeGym Career - Bệ Phóng Sự Nghiệp Lập Trình Viên Hiện Đại</title>
+    
+    <!-- 1. Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 2. Google Fonts: Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    
+    <!-- 3. Bootstrap Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 4. Material Design Bootstrap (MDBootstrap) Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    
+    <!-- 5. Custom CSS -->
+    <link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-<header id="top">
-	<div class="fix-size">
-    	<p class="c9 left">
-        	Welcome Thomas. <a href="">[ Manage Account ]</a>
-            <span style="margin-left: 15px; font-size: 13px;">
-                Phối màu: <strong>Xanh dương (#0DADEE - Bước 1-7)</strong> | <a href="index-variant2.html" style="color: #6EE7B7; text-decoration: underline;">Xem bản Bước 8 (Tông Xanh lục) &raquo;</a>
-            </span>
-        </p>
-        <p class="c3 left">
-        	<a href="#main-nav" class="hide"><img src="images/nav-btn.png" alt="button" /></a>
-            <a href="" class="right">Sign out</a>
-        </p>
-    </div>
-    <div class="clear"></div>
-</header><!-- header -->
 
-<nav>
-	<div class="fix-size">
-    	<ul class="c5 left show">
-        	<li><a href="">Categories</a></li>
-            <li><a href="">Top Products</a></li>
-            <li><a href="">Carts</a></li>
-        </ul>
-        <a href="" class="c2 left c">
-        	<img src="images/logo.png" alt="logo" />
-        </a>
-        <form action="#" class="c5 left show">
-        	<input type="search" placeholder="search anything in store" required />
-            <input type="submit" value="search" />
-        </form>
-    </div>
-    <div class="clear"></div>
-</nav><!-- nav -->
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar codegym-navbar z-depth-2">
+            <div class="container">
+                <a class="navbar-brand font-weight-bold d-flex align-items-center" href="#home">
+                    <span class="brand-icon mr-2">
+                        <i class="fas fa-laptop-code"></i>
+                    </span>
+                    <span>CodeGym<span class="text-warning">Career</span></span>
+                </a>
+                
+                <!-- Collapse button for mobile -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarNav"
+                    aria-controls="mainNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="mainNavbarNav">
+                    <ul class="navbar-nav ml-auto align-items-lg-center">
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-500 waves-effect waves-light" href="#home">Trang chủ <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-500 waves-effect waves-light" href="#courses">Khóa học</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-500 waves-effect waves-light" href="#benefits">Lợi ích</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-500 waves-effect waves-light" href="#testimonials">Đánh giá</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-500 waves-effect waves-light" href="#contact">Liên hệ</a>
+                        </li>
+                        <li class="nav-item ml-lg-3 mt-2 mt-lg-0">
+                            <a href="#contact" class="btn btn-warning btn-sm btn-rounded font-weight-bold waves-effect waves-light m-0 px-3 py-2 z-depth-1">
+                                <i class="fas fa-paper-plane mr-1"></i> Tư vấn ngay
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<section id="banner">
-	<div class="fix-size">
-    	<section class="c9 left c">
-        	<p>Top Products / This Week / Disc / Bach</p>
-            <h1>J.S. Bach Top 25 Collection</h1>
-        </section>
-        <aside class="c3 left c">
-        	<button>Add to Cart</button>
-            <p>In Stock. Estimated Delivery in 5 days.</p>
-        </aside>
-    </div>
-    <div class="clear"></div>
-</section><!-- banner -->
-
-<section id="main">
-	<div class="fix-size">
-    	<section class="c9 left c">
-        	<h3>Limited Discount: <del>$24.99</del> $19.99</h3>            
-            <div class="trans right">
-                <div class="cover">
-                    <div class="face">
-                        <p class="on-sale">ON SALE</p>
+    <!-- ==================== HERO SECTION (JUMBOTRON / GRID) ==================== -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-7 text-white text-center text-lg-left hero-content">
+                    <span class="badge badge-pill badge-warning px-3 py-2 mb-3 font-weight-bold text-uppercase z-depth-1">
+                        <i class="fas fa-fire mr-1"></i> Bootcamp Lập Trình Thực Chiến Số 1
+                    </span>
+                    <h1 class="display-4 font-weight-bold mb-4 hero-title">
+                        Bệ Phóng Sự Nghiệp <br class="d-none d-md-inline">
+                        <span class="text-warning">Lập Trình Viên Chuyên Nghiệp</span>
+                    </h1>
+                    <p class="lead mb-4 text-light font-weight-normal hero-desc">
+                        Chuyển ngành và làm chủ nghề IT vững chắc chỉ sau 5 - 6 tháng đào tạo thực chiến. Cam kết việc làm 100% bằng hợp đồng pháp lý trước khi nhập học.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start hero-cta-group">
+                        <a href="#courses" class="btn btn-warning btn-rounded btn-lg font-weight-bold waves-effect waves-light z-depth-2 mr-md-3 mb-3">
+                            <i class="fas fa-rocket mr-2"></i> Khám phá khóa học
+                        </a>
+                        <a href="#contact" class="btn btn-outline-white btn-rounded btn-lg font-weight-bold waves-effect waves-light mb-3">
+                            <i class="fas fa-phone-alt mr-2"></i> Nhận lộ trình 1-1
+                        </a>
                     </div>
-                    <div class="face back">
-                        <b>J.S. Bach - Top 25 Collection</b>
-                        <ol>
-                            <li>Violin Concerto in A minor</li>
-                            <li>Christmas Oratorio</li>
-                            <li>Jesu Joy of Man's Desiring</li>
-                            <li>Suite No. 3 in D major</li>
-                            <!-- text -->
-                        </ol>
+                    <!-- Quick stats -->
+                    <div class="row text-center mt-4 pt-3 border-top border-white-50">
+                        <div class="col-4">
+                            <h3 class="font-weight-bold text-warning mb-0">98.6%</h3>
+                            <small class="text-light">Tỷ lệ có việc làm</small>
+                        </div>
+                        <div class="col-4 border-left border-right border-white-50">
+                            <h3 class="font-weight-bold text-warning mb-0">5000+</h3>
+                            <small class="text-light">Học viên tốt nghiệp</small>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="font-weight-bold text-warning mb-0">300+</h3>
+                            <small class="text-light">Đối tác tuyển dụng</small>
+                        </div>
                     </div>
                 </div>
-            </div><!-- trans -->
-            
-            <p>
-            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id diam metus. Duis tellus augue, malesuada ac lacinia eu, faucibus quis sem. Morbi at metus nisi, at facilisis sem. Nullam sit amet orci lorem. Aenean blandit tellus a ante malesuada ut malesuada lectus tristique. Suspendisse potenti. Donec urna quam, tempor ut dignissim sed, laoreet quis eros. In hac habitasse platea dictumst. Nunc tempus, risus non viverra ultrices, nisl purus ornare tellus, ut scelerisque nunc sem non turpis. Phasellus dictum interdum enim, non viverra odio pharetra id. Duis ut molestie purus. Morbi lectus lectus, ultricies eu congue et, posuere id felis. Fusce elementum felis lacinia mi convallis venenatis. Donec molestie tempor ligula, quis euismod ipsum posuere a. Donec id mi erat, at volutpat massa. Suspendisse tempor, massa eget venenatis malesuada, ipsum turpis suscipit risus, id fermentum dui purus eget nisi.<!-- text -->
-            </p>
-            
-            <h2>Previews</h2>
-            <ul class="preview">
-            	<li class="left"><a href="">
-                	<div class="c3 left">
-                    	<p class="title">PREVIEW</p>
-                        <div class="circle"><div class="triangle">&#9658;</div></div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                    <div class="hero-image-card card z-depth-3 p-4">
+                        <div class="card-body">
+                            <div class="icon-circle mb-3 mx-auto">
+                                <i class="fas fa-user-graduate fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title font-weight-bold text-dark mb-2">Đăng Ký Nhận Học Bổng</h4>
+                            <p class="card-text text-muted small mb-4">
+                                Nhận suất học bổng công nghệ lên tới 15.000.000đ dành cho học viên đăng ký sớm trong tháng.
+                            </p>
+                            <form action="#" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Chuyên viên CodeGym sẽ liên hệ tư vấn trong 15 phút.');">
+                                <div class="md-form md-outline my-3">
+                                    <input type="text" id="heroName" class="form-control" required>
+                                    <label for="heroName">Họ và tên của bạn</label>
+                                </div>
+                                <div class="md-form md-outline my-3">
+                                    <input type="tel" id="heroPhone" class="form-control" required>
+                                    <label for="heroPhone">Số điện thoại liên hệ</label>
+                                </div>
+                                <div class="md-form md-outline my-3">
+                                    <input type="email" id="heroEmail" class="form-control" required>
+                                    <label for="heroEmail">Email nhận lộ trình</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block btn-rounded font-weight-bold waves-effect waves-light z-depth-2 mt-4">
+                                    Đăng Ký Tư Vấn Ngay
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="c9 left">
-                    	<b>Violin Concerto in A minor</b><!-- text -->
-                        <small>Duration: 3:50</small>
-                    </div>
-                    <div class="clear"></div>
-                </a></li><!-- element -->
-                
-                <li class="right"><a href="">
-                	<div class="c3 left">
-                    	<p class="title">PREVIEW</p>
-                        <div class="circle"><div class="triangle">&#9658;</div></div>
-                    </div>
-                    <div class="c9 left">
-                    	<b>Christmas Oratorio</b><!-- text -->
-                        <small>Duration: 2:26</small>
-                    </div>
-                    <div class="clear"></div>
-                </a></li><!-- element -->
-                <li class="clear"></li>
-                
-                <li class="left"><a href="">
-                	<div class="c3 left">
-                    	<p class="title">PREVIEW</p>
-                        <div class="circle"><div class="triangle">&#9658;</div></div>
-                    </div>
-                    <div class="c9 left">
-                    	<b>Jesu Joy of Man's Desiring</b><!-- text -->
-                        <small>Duration: 3:27</small>
-                    </div>
-                    <div class="clear"></div>
-                </a></li><!-- element -->
-                
-                <li class="right"><a href="">
-                	<div class="c3 left">
-                    	<p class="title">PREVIEW</p>
-                        <div class="circle"><div class="triangle">&#9658;</div></div>
-                    </div>
-                    <div class="c9 left">
-                    	<b>Suite No. 3 in D major</b><!-- text -->
-                        <small>Duration: 3:28</small>
-                    </div>
-                    <div class="clear"></div>
-                </a></li><!-- element -->
-            </ul>
-            <div class="clear"></div>
-            
-            <h2>Top Reviews</h2>
-            <blockquote>
-            	<div class="quote">&ldquo;</div>
-                <p>
-                	Masterpiece! The must-have music you couldn't miss.<small>- S.H. Mak</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KHÓA HỌC NỔI BẬT (MDB CARDS) ==================== -->
+    <section id="courses" class="py-5 bg-light">
+        <div class="container py-4">
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <span class="text-uppercase font-weight-bold text-primary small tracking-wide">Chương Trình Đào Tạo Thực Chiến</span>
+                <h2 class="display-5 font-weight-bold text-dark mt-1">Các Khóa Học Nghề Lập Trình Tiêu Biểu</h2>
+                <div class="section-divider mx-auto my-3"></div>
+                <p class="text-muted max-w-700 mx-auto">
+                    Chương trình đào tạo được thiết kế bám sát thực tế theo nhu cầu tuyển dụng của doanh nghiệp công nghệ hàng đầu hiện nay.
                 </p>
-            </blockquote>
-            
-            <blockquote>
-            	<div class="quote">&ldquo;</div>
-                <p>
-                	Buy it now and you would not regrad. <small>- Johnahtan</small>
+            </div>
+
+            <!-- Course Grid Cards -->
+            <div class="row">
+                <!-- Course Card 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 course-card z-depth-1 hoverable">
+                        <div class="view overlay">
+                            <div class="course-header-banner bg-primary text-white p-4 text-center">
+                                <i class="fab fa-java fa-4x mb-2 text-warning"></i>
+                                <h5 class="font-weight-bold mb-0">Java Full-Stack</h5>
+                            </div>
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge badge-success px-2 py-1"><i class="fas fa-check-circle mr-1"></i> Cam kết việc làm</span>
+                                    <small class="text-muted"><i class="far fa-clock mr-1"></i> 5.5 Tháng</small>
+                                </div>
+                                <h4 class="card-title font-weight-bold text-dark">Lập Trình Web Java Doanh Nghiệp</h4>
+                                <p class="card-text text-muted small">
+                                    Làm chủ Java Core, Spring Boot, Hibernate, RESTful API và hệ thống cơ sở dữ liệu lớn. Công nghệ được các ngân hàng & tập đoàn săn đón.
+                                </p>
+                                <ul class="list-unstyled text-muted small mb-3">
+                                    <li><i class="fas fa-check text-success mr-2"></i> Luyện tập 800+ giờ code thực chiến</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Hoàn thành 4 dự án Portfolio lớn</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Phù hợp người mới bắt đầu từ số 0</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="#contact" class="btn btn-outline-primary btn-rounded btn-block font-weight-bold waves-effect">
+                                    Xem Lộ Trình Chi Tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 course-card z-depth-1 hoverable popular-card">
+                        <div class="popular-ribbon">Phổ Biến Nhất</div>
+                        <div class="view overlay">
+                            <div class="course-header-banner bg-indigo text-white p-4 text-center" style="background-color: #3F51B5 !important;">
+                                <i class="fab fa-react fa-4x mb-2 text-info"></i>
+                                <h5 class="font-weight-bold mb-0">Frontend Chuyên Nghiệp</h5>
+                            </div>
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge badge-primary px-2 py-1"><i class="fas fa-star mr-1"></i> Xu hướng 2026</span>
+                                    <small class="text-muted"><i class="far fa-clock mr-1"></i> 5 Tháng</small>
+                                </div>
+                                <h4 class="card-title font-weight-bold text-dark">Frontend Web Với React.js & TypeScript</h4>
+                                <p class="card-text text-muted small">
+                                    Thành thạo HTML5/CSS3, JavaScript ES6+, ReactJS, Redux Toolkit, Next.js và xây dựng Single Page Application hiện đại.
+                                </p>
+                                <ul class="list-unstyled text-muted small mb-3">
+                                    <li><i class="fas fa-check text-success mr-2"></i> Tối ưu UI/UX mượt mà, chuẩn Responsive</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Tích hợp RESTful API & GraphQL</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Phỏng vấn giả định Mock Interview 1-1</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="#contact" class="btn btn-primary btn-rounded btn-block font-weight-bold waves-effect waves-light z-depth-1">
+                                    Xem Lộ Trình Chi Tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 course-card z-depth-1 hoverable">
+                        <div class="view overlay">
+                            <div class="course-header-banner bg-dark text-white p-4 text-center">
+                                <i class="fab fa-python fa-4x mb-2 text-warning"></i>
+                                <h5 class="font-weight-bold mb-0">Python & Data Analytics</h5>
+                            </div>
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge badge-warning px-2 py-1 text-dark"><i class="fas fa-bolt mr-1"></i> Hot Job</span>
+                                    <small class="text-muted"><i class="far fa-clock mr-1"></i> 6 Tháng</small>
+                                </div>
+                                <h4 class="card-title font-weight-bold text-dark">Lập Trình Python & Xử Lý Dữ Liệu</h4>
+                                <p class="card-text text-muted small">
+                                    Nắm vững ngôn ngữ Python, phân tích dữ liệu, tự động hóa tác vụ, trực quan hóa dữ liệu và xây dựng ứng dụng với Django/FastAPI.
+                                </p>
+                                <ul class="list-unstyled text-muted small mb-3">
+                                    <li><i class="fas fa-check text-success mr-2"></i> Xử lý dữ liệu thực tế cùng Pandas & NumPy</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Xây dựng Web API tốc độ cao</li>
+                                    <li><i class="fas fa-check text-success mr-2"></i> Kết nối doanh nghiệp công nghệ tài chính</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="#contact" class="btn btn-outline-dark btn-rounded btn-block font-weight-bold waves-effect">
+                                    Xem Lộ Trình Chi Tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LỢI ÍCH ĐÀO TẠO (FEATURES / BENEFITS) ==================== -->
+    <section id="benefits" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase font-weight-bold text-primary small tracking-wide">Tại Sao Chọn CodeGym</span>
+                <h2 class="display-5 font-weight-bold text-dark mt-1">Lợi Thế Vượt Trội Của Học Viên CodeGym</h2>
+                <div class="section-divider mx-auto my-3"></div>
+                <p class="text-muted max-w-700 mx-auto">
+                    Mô hình đào tạo Coding Bootcamp độc quyền giúp rút ngắn thời gian và tối đa hóa năng lực làm việc thực tiễn.
                 </p>
-            </blockquote>
-        </section>
-        <aside class="c3 left c">
-        	<h3>About J.S. Bach</h3>
-            <p class="about">
-            	Nullam sit amet orci lorem. Aenean blandit tellus a ante malesuada ut malesuada lectus tristique. Suspendisse potenti. Donec urna quam, tempor ut dignissim sed, laoreet quis eros. In hac habitasse platea dictumst. Nunc tempus, risus non viverra ultrices, nisl purus ornare tellus.
-            </p>
-            
-            <h3>Recommends</h3>
-            <div class="aside-cover">
-            	<div class="trans">
-                	<div class="cover">
-                    	<div class="face">
-                        </div>
-                        <div class="face back">
-                        	<b>J.S. Bach - Top 25 Collection</b>
-                            <ol>
-                            	<li>Violin Concerto in A minor</li>
-                                <li>Christmas Oratorio</li>
-                                <li>Jesu Joy of Man's Desiring</li>
-                                <li>Suite No. 3 in D major</li>
-                            	<!-- text -->
-                            </ol>
-                            <button>Go to Album</button>
+            </div>
+
+            <div class="row">
+                <!-- Benefit 1 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 benefit-box text-center p-3 z-depth-1 hoverable border-0">
+                        <div class="card-body">
+                            <div class="benefit-icon-wrapper mx-auto mb-3 text-primary">
+                                <i class="fas fa-file-signature fa-2x"></i>
+                            </div>
+                            <h5 class="font-weight-bold mb-2">Cam Kết Việc Làm</h5>
+                            <p class="text-muted small mb-0">
+                                Cam kết 100% học viên có việc làm sau tốt nghiệp bằng văn bản hợp đồng pháp lý, hoàn 100% học phí nếu không đạt.
+                            </p>
                         </div>
                     </div>
-                </div><!-- trans -->
-            	<p>Bach Gold Collection T-Shirt</p>
-            </div><!-- aside cover -->
-            
-            <div class="aside-cover">
-            	<div class="trans">
-                	<div class="cover">
-                    	<div class="face">
-                        </div>
-                        <div class="face back">
-                        	<b>J.S. Bach - Top 25 Collection</b>
-                            <ol>
-                            	<li>Violin Concerto in A minor</li>
-                                <li>Christmas Oratorio</li>
-                                <li>Jesu Joy of Man's Desiring</li>
-                                <li>Suite No. 3 in D major</li>
-                            	<!-- text -->
-                            </ol>
-                            <button>Go to Album</button>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 benefit-box text-center p-3 z-depth-1 hoverable border-0">
+                        <div class="card-body">
+                            <div class="benefit-icon-wrapper mx-auto mb-3 text-warning">
+                                <i class="fas fa-code fa-2x"></i>
+                            </div>
+                            <h5 class="font-weight-bold mb-2">Thực Hành 90%</h5>
+                            <p class="text-muted small mb-0">
+                                Học qua thực hành và dự án thực tế. Mỗi học viên rèn luyện hơn 800 giờ code liên tục để tích lũy kinh nghiệm tương đương 1 năm làm việc.
+                            </p>
                         </div>
                     </div>
-                </div><!-- trans -->
-                <p>Bach Gold Collection</p>
-            </div><!-- aside cover -->
-        </aside>
-    </div>
-    <div class="clear"></div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 benefit-box text-center p-3 z-depth-1 hoverable border-0">
+                        <div class="card-body">
+                            <div class="benefit-icon-wrapper mx-auto mb-3 text-success">
+                                <i class="fas fa-chalkboard-teacher fa-2x"></i>
+                            </div>
+                            <h5 class="font-weight-bold mb-2">Mentor Kèm 1-1</h5>
+                            <p class="text-muted small mb-0">
+                                Đội ngũ giảng viên và Mentor giàu kinh nghiệm tại các tập đoàn công nghệ lớn trực tiếp hướng dẫn, code review từng dòng lệnh.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100 benefit-box text-center p-3 z-depth-1 hoverable border-0">
+                        <div class="card-body">
+                            <div class="benefit-icon-wrapper mx-auto mb-3 text-danger">
+                                <i class="fas fa-handshake fa-2x"></i>
+                            </div>
+                            <h5 class="font-weight-bold mb-2">Mạng Lưới 300+ Đối Tác</h5>
+                            <p class="text-muted small mb-0">
+                                Kết nối trực tiếp với hơn 300 đối tác tuyển dụng hàng đầu như FPT Software, Viettel, CMC Global, VNG, NashTech,...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL (Ý KIẾN HỌC VIÊN - MDB CAROUSEL) ==================== -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase font-weight-bold text-primary small tracking-wide">Cảm Nhận Học Viên</span>
+                <h2 class="display-5 font-weight-bold text-dark mt-1">Câu Chuyện Đổi Đời Thành Công</h2>
+                <div class="section-divider mx-auto my-3"></div>
+                <p class="text-muted max-w-700 mx-auto">
+                    Hàng ngàn bạn trẻ từ trái ngành, mất phương hướng đã tìm được vị trí lập trình viên mơ ước tại các công ty công nghệ lớn.
+                </p>
+            </div>
+
+            <!-- Testimonial Cards Row -->
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card testimonial-card z-depth-1 hoverable h-100">
+                        <div class="card-up indigo lighten-1"></div>
+                        <div class="avatar mx-auto white">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" 
+                                 class="rounded-circle img-fluid" alt="Avatar Học Viên">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="font-weight-bold text-dark mb-1">Nguyễn Thị Mai</h5>
+                            <p class="text-primary font-weight-500 small mb-2">Cựu SV Ngôn Ngữ &rarr; Frontend Dev tại FPT</p>
+                            <div class="star-rating text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text text-muted small font-italic">
+                                <i class="fas fa-quote-left text-muted mr-2"></i>
+                                Xuất thân từ khối xã hội, mình từng nghĩ học lập trình là điều bất khả thi. Nhưng phương pháp Bootcamp tại CodeGym với sự kiên nhẫn của mentor đã giúp mình nhận offer công việc ngay trước khi tốt nghiệp!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card testimonial-card z-depth-1 hoverable h-100">
+                        <div class="card-up primary-color"></div>
+                        <div class="avatar mx-auto white">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" 
+                                 class="rounded-circle img-fluid" alt="Avatar Học Viên">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="font-weight-bold text-dark mb-1">Trần Quang Huy</h5>
+                            <p class="text-primary font-weight-500 small mb-2">Nhân viên Xây Dựng &rarr; Java Backend tại Viettel</p>
+                            <div class="star-rating text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text text-muted small font-italic">
+                                <i class="fas fa-quote-left text-muted mr-2"></i>
+                                Quyết định chuyển ngành ở tuổi 27 là bước ngoặt lớn nhất đời mình. Môi trường kỷ luật cao tại CodeGym rèn luyện cho mình tư duy giải quyết vấn đề và kỹ năng làm việc nhóm thực thụ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 mx-auto">
+                    <div class="card testimonial-card z-depth-1 hoverable h-100">
+                        <div class="card-up unique-color-dark"></div>
+                        <div class="avatar mx-auto white">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" 
+                                 class="rounded-circle img-fluid" alt="Avatar Học Viên">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="font-weight-bold text-dark mb-1">Lê Minh Đức</h5>
+                            <p class="text-primary font-weight-500 small mb-2">Sinh Viên Cơ Khí &rarr; Full-Stack Dev tại VNG</p>
+                            <div class="star-rating text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text text-muted small font-italic">
+                                <i class="fas fa-quote-left text-muted mr-2"></i>
+                                Thời gian học tập tuy áp lực nhưng kết quả mang lại vượt xa kỳ vọng. Mức lương khởi điểm hiện tại cao gấp đôi công việc cơ khí trước đây của mình. Cảm ơn CodeGym rất nhiều!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION / FORM LIÊN HỆ ==================== -->
+    <section id="contact" class="py-5 cta-section text-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-left mb-4 mb-lg-0">
+                    <h2 class="display-5 font-weight-bold mb-3">Sẵn Sàng Bắt Đầu Sự Nghiệp Lập Trình?</h2>
+                    <p class="lead mb-0 text-white-50">
+                        Đừng để sự do dự cản bước tương lai của bạn. Liên hệ ngay để nhận bài test năng khiếu lập trình và tư vấn lộ trình học hoàn toàn miễn phí.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-center text-lg-right">
+                    <a href="tel:0986500355" class="btn btn-warning btn-rounded btn-lg font-weight-bold waves-effect waves-light z-depth-2 mr-2 mb-2">
+                        <i class="fas fa-phone-alt mr-2"></i> Hotline: 0986.500.355
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER (MDB FOOTER COMPONENT) ==================== -->
+    <footer class="page-footer font-small unique-color-dark pt-4">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <!-- Col 1: About -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-white d-flex align-items-center justify-content-center justify-content-md-start">
+                        <i class="fas fa-laptop-code mr-2 text-warning"></i> CodeGym Career
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p class="text-muted small">
+                        Hệ thống đào tạo lập trình viên hiện đại theo mô hình Coding Bootcamp đầu tiên tại Việt Nam. Giúp người học làm chủ công nghệ và tìm được việc làm nhanh nhất.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="btn-floating btn-sm btn-fb waves-effect waves-light"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn-floating btn-sm btn-tw waves-effect waves-light"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="btn-floating btn-sm btn-li waves-effect waves-light"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn-floating btn-sm btn-git waves-effect waves-light"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Courses -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-white">Khóa học</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p class="small mb-2"><a href="#courses" class="text-muted">Java Full-Stack</a></p>
+                    <p class="small mb-2"><a href="#courses" class="text-muted">Frontend ReactJS</a></p>
+                    <p class="small mb-2"><a href="#courses" class="text-muted">Python & Data</a></p>
+                    <p class="small mb-2"><a href="#courses" class="text-muted">Lập Trình Cho Trẻ Em</a></p>
+                </div>
+
+                <!-- Col 3: Useful Links -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-white">Liên kết hữu ích</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p class="small mb-2"><a href="#benefits" class="text-muted">Phương pháp Bootcamp</a></p>
+                    <p class="small mb-2"><a href="#benefits" class="text-muted">Cam kết việc làm</a></p>
+                    <p class="small mb-2"><a href="#testimonials" class="text-muted">Ý kiến học viên</a></p>
+                    <p class="small mb-2"><a href="#contact" class="text-muted">Chính sách bảo mật</a></p>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-white">Thông tin liên hệ</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p class="small text-muted mb-2"><i class="fas fa-map-marker-alt mr-2 text-warning"></i> Tòa nhà Nam Cường, Tố Hữu, Hà Đông, Hà Nội</p>
+                    <p class="small text-muted mb-2"><i class="fas fa-envelope mr-2 text-warning"></i> info@codegym.vn</p>
+                    <p class="small text-muted mb-2"><i class="fas fa-phone mr-2 text-warning"></i> 0246 253 8829</p>
+                    <p class="small text-muted mb-2"><i class="fas fa-headset mr-2 text-warning"></i> Hotline: 0986 500 355</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            <div class="container">
+                <small class="text-muted">
+                    &copy; 2026 Bản quyền thuộc về <a href="#" class="text-white font-weight-bold">CodeGym Career</a>. Xây dựng bằng Bootstrap Material Design (MDBootstrap).
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT LIBS (MDB BOILERPLATE STANDARD) ==================== -->
+    <!-- 1. JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-    <nav id="main-nav" class="c12 c hide">
-    	<ul>
-        	<li><a href="#top"><span class="arrow"></span>Back to Top</a></li>
-            <li><a href="">Categories</a></li>
-            <li><a href="">Top Products</a></li>
-            <li><a href="">Carts</a></li>
-            <li><a href="">Your Account</a></li>
-        </ul>
-        <form action="#">
-        	<input type="search" placeholder="search in store" required />
-            <input type="submit" value="go" />
-        </form>
-    </nav><!-- main nav -->
-    <div class="clear"></div>
-</section><!-- main -->
+    <!-- 2. Bootstrap tooltips (Popper.js) -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    
+    <!-- 3. Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    <!-- 4. MDBootstrap Core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    
+    <!-- Custom interactive scripts -->
+    <script>
+        $(document).ready(function () {
+            // Smooth scrolling for navigation links
+            $("a.nav-link, a.btn").on('click', function (event) {
+                if (this.hash !== "") {
+                    var target = $(this.hash);
+                    if (target.length) {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 70
+                        }, 700, function () {
+                            window.location.hash = hash;
+                        });
+                    }
+                }
+            });
 
-<section id="info">
-	<div class="fix-size">
-    	<div class="c4 left c">
-        	<h3>Follow Us</h3>
-            <p>
-            	Lorem ipsum dolor sit amet.
-            </p>
-        </div>
-        <div class="c4 left c">
-        	<h3>Newsletter</h3>
-            <p>
-            	Faucibus quis sem. Morbi at metus nisi, at facilisis sem. Nullam sit amet orci lorem. Aenean blandit tellus a ante malesuada ut malesuada.
-            </p>
-            <form action="#">
-            	<input type="email" placeholder="your email" required />
-                <input type="submit" value="Subscribe" />
-            </form>
-        </div>
-        <div class="c4 left c">
-        	<h3>Refund Policy</h3>
-        	<p>
-            	Morbi lectus lectus, ultricies eu congue et, posuere id felis. Fusce elementum felis lacinia mi convallis venenatis. Donec molestie tempor ligula, quis euismod ipsum posuere a. Donec id mi erat, at volutpat massa.
-            </p>
-        </div>
-    </div>
-    <div class="clear"></div>
-</section><!-- info -->
-
-<footer>
-	<div class="fix-size">
-    	<div class="c12 c">
-        	<span>&copy; 2013. Imaginary Store.</span>
-            <span class="right">Handmade in Leipzig, Germany.</span>
-        </div>
-    </div>
-    <div class="clear"></div>
-</footer><!-- footer -->
+            // Auto close mobile navbar on click
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+    </script>
 </body>
 </html>
