@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Phiên Bản 1 (Tươi Sáng)</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =======================================================
+           BỘ 4 MÃ MÀU HEX CHỦ ĐỀ TƯƠI SÁNG (ADOBE COLOR TREND)
+           - Primary: #0284C7 (Xanh lam tươi - Năng động & Sáng tạo)
+           - Secondary: #38BDF8 (Xanh da trời dịu - Tươi trẻ)
+           - Accent: #F97316 (Cam san hô - Tạo điểm nhấn kêu gọi hành động)
+           - Darker Primary: #0369A1 (Xanh đại dương đậm - Chiều sâu & Độ tương phản)
+           ======================================================= */
+        :root {
+            --primary-color: #0284C7;
+            --secondary-color: #38BDF8;
+            --accent-color: #F97316;
+            --darker-primary-color: #0369A1;
+            
+            --bg-body: #F0F9FF;
+            --text-dark: #0F172A;
+            --text-muted: #64748B;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .newsletter-header {
+            background: linear-gradient(135deg, var(--darker-primary-color) 0%, var(--primary-color) 100%);
+            color: #FFFFFF;
+            padding: 1.25rem 0;
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.15);
+        }
+
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brand-badge {
+            background-color: var(--accent-color);
+            color: #FFFFFF;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+
+        /* Card giới thiệu (Intro / Hero Card) */
+        .hero-card {
+            background: #FFFFFF;
+            border: 2px solid rgba(56, 189, 248, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(2, 132, 199, 0.12);
+        }
+
+        .hero-banner-tag {
+            background-color: var(--secondary-color);
+            color: var(--darker-primary-color);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.35rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .hero-title {
+            color: var(--darker-primary-color);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .btn-subscribe {
+            background-color: var(--accent-color);
+            color: #FFFFFF;
+            font-weight: 700;
+            padding: 0.75rem 1.75rem;
+            border-radius: 12px;
+            border: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+        }
+
+        .btn-subscribe:hover {
+            background-color: #EA580C;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(249, 115, 22, 0.45);
+        }
+
+        /* Card tính năng nổi bật (Feature Cards) */
+        .feature-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(2, 132, 199, 0.15);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-color);
+            box-shadow: 0 12px 28px rgba(2, 132, 199, 0.12);
+        }
+
+        .feature-icon-wrapper {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .feature-title {
+            color: var(--darker-primary-color);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .btn-feature {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-feature:hover {
+            color: var(--accent-color);
+            gap: 0.7rem;
+        }
+
+        /* Color Palette Indicator */
+        .palette-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFFFFF;
+            padding: 6px 14px;
+            border-radius: 50px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 4px;
+        }
+        .color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .newsletter-footer {
+            margin-top: auto;
+            background-color: var(--darker-primary-color);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 2.5rem 0 1.5rem;
+        }
+
+        .newsletter-footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .newsletter-footer a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="newsletter-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="newsletter_version1.html" class="brand-logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                TechPulse
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="brand-badge d-none d-sm-inline-block">Số 42 &bull; Tươi Sáng</span>
+                <a href="newsletter_version2.html" class="btn btn-sm btn-outline-light rounded-pill px-3 fw-semibold">
+                    Xem Bản Trầm (Bản 2) &rarr;
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="container my-5">
+        
+        <!-- Palette Showroom Info -->
+        <div class="text-center mb-4">
+            <h6 class="text-uppercase fw-bold text-muted small mb-2">Bảng Phối Màu Adobe Color Đang Áp Dụng</h6>
+            <div class="d-flex flex-wrap justify-content-center">
+                <span class="palette-badge">
+                    <span class="color-dot" style="background-color: var(--primary-color);"></span>
+                    Primary: #0284C7
+                </span>
+                <span class="palette-badge">
+                    <span class="color-dot" style="background-color: var(--secondary-color);"></span>
+                    Secondary: #38BDF8
+                </span>
+                <span class="palette-badge">
+                    <span class="color-dot" style="background-color: var(--accent-color);"></span>
+                    Accent: #F97316
+                </span>
+                <span class="palette-badge">
+                    <span class="color-dot" style="background-color: var(--darker-primary-color);"></span>
+                    Darker: #0369A1
+                </span>
+            </div>
+        </div>
+
+        <!-- ==================== CARD GIỚI THIỆU (HERO CARD) ==================== -->
+        <div class="card hero-card p-4 p-md-5 mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <span class="hero-banner-tag mb-3">
+                        ✨ Tiêu Điểm Tuần Này
+                    </span>
+                    <h1 class="hero-title display-6 mb-3">
+                        Nghệ Thuật Phối Màu Web: Từ Adobe Color Đến Giao Diện Bootstrap Chuẩn Xác
+                    </h1>
+                    <p class="text-secondary lead fs-6 mb-4">
+                        Khám phá bí quyết kết hợp 4 cấp độ màu sắc hài hòa để biến một trang web đơn điệu thành trải nghiệm người dùng đầy cảm xúc, bắt mắt và kích thích tương tác mạnh mẽ.
+                    </p>
+                    <!-- Newsletter Form -->
+                    <form action="#" class="row g-2 align-items-center" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin tươi sáng!');">
+                        <div class="col-sm-8 col-md-7">
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </span>
+                                <input type="email" class="form-control border-start-0 py-2" placeholder="Nhập địa chỉ email của bạn..." required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-5">
+                            <button type="submit" class="btn btn-subscribe w-100">
+                                Nhận Bản Tin Miễn Phí
+                            </button>
+                        </div>
+                    </form>
+                    <small class="text-muted d-block mt-2">
+                        🔒 Bảo mật 100%. Gửi vào mỗi thứ Hai hàng tuần. Hủy đăng ký bất kỳ lúc nào.
+                    </small>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(56, 189, 248, 0.15) 100%); border: 1px dashed var(--secondary-color);">
+                        <div class="display-3 mb-2">🎨</div>
+                        <h5 class="fw-bold text-dark mb-1">Chủ Đề: Tươi Sáng</h5>
+                        <p class="text-muted small mb-0">Truyền tải năng lượng tích cực, sự tươi mới và tinh thần hiện đại.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== 2 CARD TÍNH NĂNG NỔI BẬT ==================== -->
+        <div class="row g-4 mb-5">
+            <!-- Card Tính Năng 1 -->
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon-wrapper">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <span class="badge bg-light text-primary mb-2 fw-semibold px-2 py-1">Tài Liệu UI/UX</span>
+                        <h3 class="feature-title">Quy Tắc 60-30-10 & Phối Màu Đơn Sắc</h3>
+                        <p class="text-muted mb-4">
+                            Tìm hiểu sâu cách chia tỷ lệ màu sắc chuẩn quốc tế: 60% màu nền không gian, 30% màu cấu trúc nhận diện thương hiệu, và 10% màu nhấn (Accent) tạo đột phá cho tỷ lệ chuyển đổi.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn-feature">
+                            Đọc bài phân tích
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Tính Năng 2 -->
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon-wrapper" style="background: linear-gradient(135deg, var(--accent-color) 0%, #EA580C 100%);">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <span class="badge bg-light text-warning mb-2 fw-semibold px-2 py-1" style="color: #D97706 !important;">Công Cụ Độc Quyền</span>
+                        <h3 class="feature-title">Thư Viện Palette Tối Ưu Tương Phản WCAG</h3>
+                        <p class="text-muted mb-4">
+                            Nhận danh sách hơn 50 bộ mã màu Adobe Color đã được kiểm định độ tương phản chuẩn WCAG 2.1 AAA, đảm bảo mọi độc giả đều có thể đọc nội dung dễ dàng và thân thiện.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn-feature">
+                            Khám phá thư viện mã màu
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="newsletter-footer">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5 class="text-white fw-bold mb-1">TechPulse Newsletter</h5>
+                    <p class="small text-white-50 mb-0">
+                        &copy; 2026 TechPulse. Bản tin phối màu giao diện được hỗ trợ bởi Bootstrap 5 & Adobe Color.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0 small">
+                        <li class="list-inline-item"><a href="#">Chính sách riêng tư</a></li>
+                        <li class="list-inline-item text-white-50">&bull;</li>
+                        <li class="list-inline-item"><a href="#">Điều khoản sử dụng</a></li>
+                        <li class="list-inline-item text-white-50">&bull;</li>
+                        <li class="list-inline-item"><a href="#">Hủy đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
